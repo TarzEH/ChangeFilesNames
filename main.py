@@ -1,20 +1,22 @@
-
 import os
 from tkinter import *
 #GUI
 
-# declare the window
-window = Tk()
-# set window title
-window.title("Change files name app")
-# set window width and height
-window.configure(width=500, height=300)
-# set window background color
-window.configure(bg='lightgray')
-window.mainloop()
+from tkinter import *
+root = Tk()
+
+root.title("Change files name app")
+root.configure(width=500, height=300)
+root.configure(bg='lightgray')
+label1 = Label(root, padx=50, pady=100, text="Hi, insert Directory Name: ")
+label1.pack()
+import_user = Entry(root)
+import_user.pack()
+MyButton = Button(root, pady=50, padx=50, text="submit")
+MyButton.pack()
 
 
-
+root.mainloop()
 
 
 #Functions
