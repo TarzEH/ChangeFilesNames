@@ -12,14 +12,14 @@ A simple script in Python to solve a problem for the HR and Finance department i
 
 
 
-### Built With
+## Built With
 * Python - <img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/python.png"/>
 
 
 
 
-
-2. Clone the repo
+##  How to Use:
+ Clone the repo & run the gui file.
    ```sh
    git clone https://github.com/OriZzZ-94/ChangeFilesNames.git
    ```
