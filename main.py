@@ -27,14 +27,14 @@ def Program(dir):
     directory=os.path.basename(os.path.normpath(dir))
     path=os.walk(os.getcwd())
     for root, directories, files in path:
-            for file in os.listdir(root):
-                full_path = os.path.join(root, file)
-                #if os.path.isfile(full_path):
-                if directory in full_path and not os.path.isfile(full_path):
-                    for filename in os.listdir(full_path):
-                        check_file = os.path.join(full_path, filename)
-                        if os.path.isfile(check_file):
-                            condition_function(check_file)
+        for path in os.listdir(root):
+            full_path = os.path.join(root, path)
+            # if os.path.isfile(full_path):
+            if directory in full_path and not os.path.isfile(full_path):
+                for filename in os.listdir(full_path):
+                    check_file = os.path.join(full_path, filename)
+                    if os.path.isfile(check_file):
+                        condition_function(check_file)
 
 
 
