@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog as fd
+from main import Program
 from tkinter.messagebox import showinfo
 
 
@@ -21,28 +22,29 @@ def select_files():
 
 def select_dir():
     dirname = fd.askdirectory()
-    return dirname
+    Program(dirname)
 
-def run():
-    # create the root window
-    root = tk.Tk()
-    root.title('Change files name app')
-    root.resizable(False, False)
-    root.geometry('300x150')
 
-    # open buttons
-    open_button = ttk.Button(
-        root,
-        text='Open Files',
-        command=select_files
-    )
-    open_button2 = ttk.Button(
-        root,
-        text='Open Dirs',
-        command=select_dir
-    )
 
-    open_button.pack(expand=True)
-    open_button2.pack(expand=True)
+# create the root window
+root = tk.Tk()
+root.title('Change files name app')
+root.resizable(False, False)
+root.geometry('300x150')
 
-    root.mainloop()
+# open buttons
+open_button = ttk.Button(
+    root,
+    text='Open Files',
+    command=select_files
+)
+open_button2 = ttk.Button(
+    root,
+    text='Open Dirs',
+    command=select_dir
+)
+
+open_button.pack(expand=True)
+open_button2.pack(expand=True)
+
+root.mainloop()
