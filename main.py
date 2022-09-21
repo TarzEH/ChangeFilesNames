@@ -23,8 +23,8 @@ def condition_function(filename):
 
 #Program
 def Program(dir):
-    directory=os.path.basename(os.path.normpath(dir))
     os.chdir(dir)
+    directory=os.path.basename(os.path.normpath(dir))
     path=os.walk(os.getcwd())
     for root, directories, files in path:
             for file in os.listdir(root):
